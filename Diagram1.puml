@@ -1,0 +1,18 @@
+@startuml Diagram1
+class Connect4 {
+  - board: list[list[str]]
+  - players: list[str]
+  - current_player: int
+  + __init__()
+  + is_valid_move(column: int): bool
+  + drop_piece(column: int): void
+  + undo_move(column: int): void
+  + check_win(): bool
+  + is_tie(): bool
+  + evaluate_window(window: list[str]): int
+  + score_position(): int
+  + minimax(depth: int, alpha: int, beta: int, maximizing_player: bool): tuple
+  + draw_board(screen)
+}
+@enduml
+
